@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Meta Information in head tag-->
+	<head> 
+		<title>HTML Lists</title>
+		<meta name="author" content="liquifiedart">
+		<meta name="description" content="Learning html lists">
+
+		<!-- Exists on a CDI or a content delivery network -->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+		<link rel="icon" href="webedu.ico">
+
+		<style>
+
+			/* =Inline bulleted lists-------------------------------------------------------------- */
+			.breadcrumb{
+				border: 1px dotted #000;
+				background-color: lightblue;
+				margin: 0;
+				padding: 0;
+			}
+
+			.breadcrumb-item{
+				display:inline-block;
+				margin: 0;
+				padding: 0;
+			}
+
+			.breadcrumb-item.active{
+				color: yellow;
+			}
+
+			.breadcrumb-item:before{
+				content: '/';
+				/*	content: '\00a0\2022\00a0\00a0';*/
+				color: red;
+				margin: 0px 4px 0px 4px;
+			}
+
+			.breadcrumb-item:first-child:before{
+				content: '';
+				margin: 0;
+				padding: 0;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Lion's Head Education</h1>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">Lions Head Education</li>
+				<li class="breadcrumb-item">Hot Cocoa Recipe</li>
+				<li class="breadcrumb-item active">Hot Cocoa</li>
+			</ol>
+		</header>
+
+		<article title="Hot Cocoa Recipe">
+			<h2>Hot Cocoa Recipe</h2>
+			<h2>Ingredients</h2>
+			<ul>
+				<li>2 T Hot cocoa mix</li>
+				<li>8oz Milk</li>
+				<li>Marshmellows</li>
+			</ul>
+			<h2>Steps</h2>
+			<ol>
+				<li>Scoop hot cocoa mix into a mug</li>
+				<li>Boil water</li>
+				<li>Add milk</li>
+				<li>Pour into cup and stir for 10 seconds</li>
+			</ol>
+		</article>
+		
+		<section title="Interesting Facts">
+			<h2>Cocoa Facts</h2>
+			<dl>
+				<dt>Hot Cocoa</dt>
+				<dd>Hot chocolate, also known as drinking chocolate, cocoa, and as chocolate tea in Nigeria, is a heated drink consisting of shaved chocolate, melted chocolate or cocoa powder, heated milk or water, and usually a sweetener. Hot chocolate may be topped with whipped cream or marshmallows. <a href="https://en.wikipedia.org/wiki/Hot_chocolate">Wikipedia</a></dd>
+			</dl>
+			<dl>
+				<dt>Marshmellows</dt>
+				<dd>Marshmallow is a type of confectionery which is typically made from sugar, water and gelatin whipped to a squishy consistency. It is used as a filling in baking, or commonly molded into shapes and coated with corn starch. This is the modern version of a medicinal confection made from Althaea officinalis, the marshmallow plant. <a href="https://en.wikipedia.org/wiki/Marshmallow">Wikipedia</a></dd>
+			</dl>
+					
+		</section>
+
+		<footer>
+			Lion's Head Consulting, &lt;liquifiedart&gt; (2019)&copy;
+		</footer>
+	</body>
+</html>
+
