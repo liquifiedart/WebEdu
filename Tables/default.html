@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Meta Information in head tag-->
+	<head> 
+		<title>HTML Tables</title>
+		<meta name="author" content="liquifiedart">
+		<meta name="description" content="Learning html lists">
+
+		<!-- Exists on a CDI or a content delivery network -->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+		<link rel="icon" href="webedu.ico" >
+
+		<style>
+			table{
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			td, th{
+				border-width: 1px;
+				border-style: groove;
+				padding: 4;
+				margin: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Lion's Head Education</h1>
+			<img src="./lhc-logo.png" 
+			alt="Lion's logo" 
+			srcset="lion-head.jpg 100w, lion-head.jpg 50w"
+			sizes="(max-width: 50em) 1vw, 8vw"/>
+		</header>
+
+		<article title="Hot Cocoa Ingredients">
+			<h2>Hot Cocoa Recipe</h2>
+			<table>
+				<caption>Ingredients</caption>
+				<thead>
+					<tr>
+						<th rowspan="2">Drink</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th colspan="2">Carbohydrates</th>
+					</tr>					
+					<tr>
+						<!-- <th>Drinks</th> -->
+						<th>Size</th>
+						<th>Calories</th>
+						<th>Servings</th>
+						<th>Protein (g)</th>
+						<th>Sugar (g)</th>
+						<th>Fiber (g)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Hot Cocoa</td>
+						<td>8oz</td>
+						<td>250</td>
+						<td>5</td>
+						<td>2</td>
+						<td>25</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>Mocha</td>
+						<td>8oz</td>
+						<td>350</td>
+						<td>5</td>
+						<td>4</td>
+						<td>35</td>
+						<td>0</td>
+					</tr>					
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Max</td>
+						<td></td>
+						<td>250</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>					
+				</tfoot>
+			</table>
+		</article>
+		
+		<section title="Interesting Facts1">
+			<h2>Cocoa Facts</h2>
+			<dl>
+				<dt>Hot Cocoa</dt>
+				<dd>Hot chocolate, also known as drinking chocolate, cocoa, and as chocolate tea in Nigeria, is a heated drink consisting of shaved chocolate, melted chocolate or cocoa powder, heated milk or water, and usually a sweetener. Hot chocolate may be topped with whipped cream or marshmallows. <a href="https://en.wikipedia.org/wiki/Hot_chocolate">Wikipedia</a></dd>
+			</dl>
+			<dl>
+				<dt>Marshmellows</dt>
+				<dd>Marshmallow is a type of confectionery which is typically made from sugar, water and gelatin whipped to a squishy consistency. It is used as a filling in baking, or commonly molded into shapes and coated with corn starch. This is the modern version of a medicinal confection made from Althaea officinalis, the marshmallow plant. <a href="https://en.wikipedia.org/wiki/Marshmallow">Wikipedia</a></dd>
+			</dl>
+					
+		</section>
+		<section title="Interesting Facts2">
+			<h2>Cocoa Facts</h2>
+			<dl>
+				<dt>Hot Cocoa</dt>
+				<dd>Hot chocolate, also known as drinking chocolate, cocoa, and as chocolate tea in Nigeria, is a heated drink consisting of shaved chocolate, melted chocolate or cocoa powder, heated milk or water, and usually a sweetener. Hot chocolate may be topped with whipped cream or marshmallows. <a href="https://en.wikipedia.org/wiki/Hot_chocolate">Wikipedia</a></dd>
+			</dl>
+			<dl>
+				<dt>Marshmellows</dt>
+				<dd>Marshmallow is a type of confectionery which is typically made from sugar, water and gelatin whipped to a squishy consistency. It is used as a filling in baking, or commonly molded into shapes and coated with corn starch. This is the modern version of a medicinal confection made from Althaea officinalis, the marshmallow plant. <a href="https://en.wikipedia.org/wiki/Marshmallow">Wikipedia</a></dd>
+			</dl>
+					
+		</section>
+		<section title="Interesting Facts3">
+			<h2>Cocoa Facts</h2>
+			<dl>
+				<dt>Hot Cocoa</dt>
+				<dd>Hot chocolate, also known as drinking chocolate, cocoa, and as chocolate tea in Nigeria, is a heated drink consisting of shaved chocolate, melted chocolate or cocoa powder, heated milk or water, and usually a sweetener. Hot chocolate may be topped with whipped cream or marshmallows. <a href="https://en.wikipedia.org/wiki/Hot_chocolate">Wikipedia</a></dd>
+			</dl>
+			<dl>
+				<dt>Marshmellows</dt>
+				<dd>Marshmallow is a type of confectionery which is typically made from sugar, water and gelatin whipped to a squishy consistency. It is used as a filling in baking, or commonly molded into shapes and coated with corn starch. This is the modern version of a medicinal confection made from Althaea officinalis, the marshmallow plant. <a href="https://en.wikipedia.org/wiki/Marshmallow">Wikipedia</a></dd>
+			</dl>
+					
+		</section>		
+		<footer id="footer">
+			Lion's Head Consulting, &lt;liquifiedart&gt; (2019)&copy;
+		</footer>
+	</body>
+</html>
+
