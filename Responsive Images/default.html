@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Meta Information in head tag-->
+	<head> 
+		<title>HTML Tables</title>
+		<meta name="author" content="liquifiedart">
+		<meta name="description" content="Learning html lists">
+
+		<!-- Always set the viewport-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Exists on a CDI or a content delivery network -->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+		<link rel="icon" href="webedu.ico" >
+	</head>
+	<body style="background-color: azure;">
+		<header>
+			<h1>Lion's Head Education</h1>
+
+			<!-- Remarks:
+				The thing is, that once your browser has the higher resolution picture (loaded, in cache),
+				there is no point for it to download lower quality one even when you make your window smaller
+				(the point of this is to save traffic).
+				So if you want to test this, just make sure your window is smaller and THEN load thepage
+				(after clearing the cache / or use incognito mode).
+				You will get the mobile or tablet version. Then by making the window bigger, you'll at some point
+				see your browser switching to higher resolution picture.
+			-->
+
+			<!-- Explanation:
+			srcset="lion-logo.png 150w,  will yield the smaller image upon load.
+					lion-head.jpg 1300w"
+				Takes two images to choose. Params(ImageURL, Intrinsice Image Width [A hint to help the browser choose])
+						
+			sizes="(max-width: 500px) 100vw, 50vw"	
+				Defines the size UNASSOCIATED with the various source's. Determines sizing based on media conditions.
+				Threshhold of width will hint to the smaller image,
+				***Can only use sizes, if a srcset width is specified***
+			-->
+			<section title="img element using srcsets and sizes">
+				<p>img element using srcsets and sizes</p>
+				<img src="./lion-head.jpg" 
+					alt="Lion's logo" 
+					srcset="puppy-600w.jpg 600w, lion-head.jpg 1300w"
+					sizes="(max-width: 700px) 50vw, 50vw"/>
+			</section>
+			
+			<section title="Using the picture element">
+				<p>Using the picture element</p>
+				<picture>
+					<!-- Source priority is top down-->
+					<source type="image/jpeg" srcset="puppy-600w.jpg 600w, lion-head.jpg 1300w" sizes="(max-width: 700px) 50vw, 50vw" />
+					
+					<!-- Media Queries can be used to denote which source to use, rather than type-->
+					<!-- <source media="(max-width: 700px)" srcset="puppy-600w.jpg 600w, lion-head.jpg 1300w" sizes="(max-width: 700px) 50vw, 50vw" /> -->
+					<img src="./lion-head.jpg" alt="Lion's logo"/>
+				</picture>
+			</section>
+
+		</header>
+
+	
+		<footer id="footer">
+			Lion's Head Consulting, &lt;liquifiedart&gt; (2019)&copy;
+		</footer>
+	</body>
+</html>
+
