@@ -1,0 +1,22 @@
+{ 
+	"recipeList" :{
+		"recipes":[{
+			"name" : "Chocolate Cake",
+			"summary" : "Summary of a chocolate cake",
+			"coverUrl" : "./Chocolate Cake/cover.jpeg",
+			"linkUrl" : "./Chocolate Cake/chcake.html"			
+		},
+		{
+			"name" : "Magic Cake",
+			"summary" : "Summary of a magic cake",
+			"coverUrl" : "./Magic Cake/cover.jpeg",
+			"linkUrl" : "./Magic Cake/mcake.html"
+		},
+		{
+			"name" : "Florida Omlette",
+			"summary" : "Summary of a florida omelette",
+			"coverUrl" : "./Florida Omlette/cover.jpeg",
+			"linkUrl" : "./Florida Omlette/fomlette.html"			
+		}]
+	}
+}

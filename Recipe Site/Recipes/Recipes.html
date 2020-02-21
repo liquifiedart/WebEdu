@@ -6,7 +6,93 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="../css/common.css" />
-        <script type="application/javascript" src="./scripts/example.js"></script>
+        <script type="application/javascript">
+
+            // Gloal objects
+            var recipes;
+
+            window.onload = function() {
+
+                LoadRecipeContent();
+            };
+
+            function LoadRecipeContent(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onerror = function(){
+                    alert(this.responseText);
+                };
+
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200 ){
+
+                        try	
+                        {
+                            var json = JSON.parse(this.responseText);
+                            recipes = json.recipeList.recipes;
+
+
+                            var listItemsHtml = "";
+                            recipes.forEach(element => {
+
+                                var itemJson = LoadListItem(element);
+                                console.log("read: " + itemJson);
+
+                                listItemsHtml += itemJson;
+                            });
+                            
+                            document.getElementById("recipeUnorderedList").innerHTML = listItemsHtml;	
+                            //document.getElementById("page2").style.display = "block"
+
+                        }
+                        catch(e)
+                        {
+                            console.log(e);
+                        }
+
+                    }
+                };
+
+                xhttp.on
+                //You can't make AJAX requests (by default) from a file:/// URL scheme. Use an HTTP server to serve your files
+                // file needs to be on a webserver
+                xhttp.open("GET", "./recipes.json", true);
+                xhttp.send();
+            }
+
+            function LoadListItem(element){
+                /*
+                    element: { 
+                        "name" : "Chocolate Cake",
+                        "summary" : "Summary of a chocolate cake",
+                        "coverUrl" : "./Chocolate Cake/cover.jpg",
+                        "linkUrl" : "./Chocolate Cake/chcake.html"			
+                    }                
+                */
+                if( element == null)
+                    return null;
+
+
+                var result = "<li>";
+            
+                // header
+                
+                result += "<a href=\"" + encodeURI(element.linkUrl) + "\">"
+                result += "<h3>";
+                result += element.name;
+                result += "</h3><</a>";
+
+                // cover image
+                result += "<img width=\"100\" height=\"100\" class=\"recipeListItemImage\" src=\"";
+                result += encodeURI(element.coverUrl) + "\" alt=\"" + element.name + "\">";
+                result += "</img>";
+
+                // summary
+                result += "<p>" + element.summary + "<p>";
+
+                result += "</li>"
+                return result;
+            }     
+        </script>
     </head>
 
     <body>
@@ -14,16 +100,19 @@
             <h1>Recipe World</h1>
             <nav class="nav">
                 <a href="../default.html">Home</a>
-                <a href="./Recipes/Recipes.html">Recipes</a>
+                <a href="./Recipes.html">Recipes</a>
                 <a href="../Suggest.html">Suggest</a>
             </nav>            
         </header>
 
         <article>
-            <section>
                 <h2>Recipes</h2>
-            </section>
+                <section title="recipe list">
+                    <ul id="recipeUnorderedList">
+                    </ul>
+                </section>
         </article>
+
         
         <footer class="footer">
             2019 Recipe World &lt;liquifiedart&gt;&copy;
