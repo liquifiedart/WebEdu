@@ -1,5 +1,6 @@
 { 
-	"description" : "super cool magic cake",
+	"description" : "super cool chocolate cake",
 	"ingredients" : ["1 egg", "1 cup of sugar", "1/2 cup of milk", "1 stick butter"],
-	"directions" : ["Mix sugar eggs and butter", "Add sugar", "Stir in milk", "Wait a minute"]
+	"directions" : ["Mix sugar eggs and butter", "Add sugar", "Stir in milk", "Wait a minute"],
+	"photoUrls" : ["./photos/1.jpeg", "./photos/2.jpeg", "./photos/3.jpeg"]
 }

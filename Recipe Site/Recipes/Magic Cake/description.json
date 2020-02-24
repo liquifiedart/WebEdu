@@ -1,5 +1,14 @@
 { 
-	"description" : "super cool magic cake",
-	"ingredients" : ["1 egg", "1 cup of sugar", "1/2 cup of milk", "1 stick butter"],
-	"directions" : ["Mix sugar eggs and butter", "Add sugar", "Stir in milk", "Wait a minute"]
+	"description" : "Grandma's Magic Cake is unbelievably easy to make and delicious. This is the perfect type of cake to serve anytime during the day. Whether you are looking for a sweet treat for breakfast or looking to curb that sweet tooth after dinner, this magic cake is exactly what you need. Plus, you can make this vanilla magic cake recipe in just a few hours and be serving it to your friends or family. Guaranteed people will be begging you to make this dessert again!",
+	"ingredients" : ["4 eggs",
+	"4 drops white vinegar",
+	"16 ounces sugar",
+	"1 tablespoon water",
+	"2 teaspoons vanilla extract",
+	"125 grams butter, melted",
+	"3 cups flour",
+	"2 cups milk, lukewarm",
+	"1 pinch salt"],
+	"directions" : ["Mix sugar eggs and butter", "Add sugar", "Stir in milk", "Wait a minute"],
+	"photoUrls" : ["./photos/1.jpeg", "./photos/2.jpeg", "./photos/3.jpeg"]
 }

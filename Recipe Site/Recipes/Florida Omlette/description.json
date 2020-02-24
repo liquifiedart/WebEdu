@@ -1,5 +1,10 @@
 { 
-	"description" : "super cool magic cake",
-	"ingredients" : ["1 egg", "1 cup of sugar", "1/2 cup of milk", "1 stick butter"],
-	"directions" : ["Mix sugar eggs and butter", "Add sugar", "Stir in milk", "Wait a minute"]
+	"description" : "The Florida Omelette. Laurin explained that the crab meat omelette took off a few years ago when Food Network chef Rachel Ray featured the dish on her former show \"&#36;40 a Day.\" The staff shirts that thank Ms. Ray keeps the brush with fame memory alive and continually pique guests' interests for anything crab on the menu. Another reason the omelette remains a steadfast menu choice is the quality of crab, Laurin points out. Splurge on the good stuff, Linda, or it just won't taste the same.",
+	"ingredients" : ["3 ounces lump crabmeat, picked clean", " 1/2 small onion, chopped", "1 small stalk celery, chopped", "2 teaspoons mayonnaise, plus more if needed", "1 tablespoon chopped fresh parsley leaves", "1/4 teaspoon Old Bay seasoning", "4 large eggs", "1 tablespoon unsalted butter", "Salt and black pepper, to taste"],
+	"directions" : [
+		"Using a medium bowl, combine the crabmeat, onion, celery, mayonnaise, parsley and Old Bay. Season with salt and pepper, to taste. Toss gently to avoid breaking up the lumps of crabmeat.", 
+		"Fold the mayonnaise to moisten the crab mixture, adding more if desired.", 
+		"Using an 8-inch nonstick pan over medium heat, heat the butter until it starts foaming. Add the crab mixture to the pan and cook gently until the celery and onions are tender for about 10 minutes.", 
+		"Using a medium bowl and a whisk, whip the eggs until smooth. Pour eggs over the crab mixture. Cook the omelet until the edges are cooked and begin to curl. Gently pull the edges toward the center, allowing the eggs to cook through. Once the eggs have become firm, flip the omelet and cook until the other side is done for about 5 minutes. Flip the omelette out of the pan onto a dish and serve immediately."],
+	"photoUrls" : ["./photos/1.jpeg", "./photos/2.jpeg", "./photos/3.jpeg"]
 }

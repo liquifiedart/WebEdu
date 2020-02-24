@@ -1,5 +1,4 @@
 window.onload = function() {
-
     LoadRecipe();
 };
 
@@ -15,21 +14,11 @@ function LoadRecipe(){
             try	
             {
                 var json = JSON.parse(this.responseText);
-                recipes = json.recipeList.recipes;
+                document.getElementById("descriptionPId").innerHTML = json.description;
 
-
-                var listItemsHtml = "";
-                recipes.forEach(element => {
-
-                    var itemJson = LoadListItem(element);
-                    console.log("read: " + itemJson);
-
-                    listItemsHtml += itemJson;
-                });
-                
-                //document.getElementById("recipeUnorderedList").innerHTML = listItemsHtml;	
-                //document.getElementById("page2").style.display = "block"
-
+                LoadIngredients(json.ingredients);
+                LoadDirections(json.directions);
+                LoadPhotos(json.photoUrls);
             }
             catch(e)
             {
@@ -45,36 +34,43 @@ function LoadRecipe(){
     xhttp.open("GET", "./description.json", true);
     xhttp.send();
 }
+function LoadIngredients(ingredients){
+    var listItemsHtml = "";
+    ingredients.forEach(element => {
+        var itemJson = "<li>";
+        itemJson += element;
+        itemJson += "</li>"
+        console.log("read: " + itemJson);
 
-function LoadListItem(element){
-    /*
-        element: { 
-            "description" : "super cool magic cake",
-            "ingredients" : ["1 egg", "1 cup of sugar", "1/2 cup of milk", "1 stick butter"],
-            "directions" : ["Mix sugar eggs and butter", "Add sugar", "Stir in milk", "Wait a minute"]
-        }             
-    */
-    if( element == null)
-        return null;
+        listItemsHtml += itemJson;
+    });                    
+    document.getElementById("ingredientsULId").innerHTML = listItemsHtml;	
+}
 
+function LoadDirections(directions){
+    var listItemsHtml = "";
+    directions.forEach(element => {
+        var itemJson = "<li>";
+        itemJson += element;
+        itemJson += "</li>"
+        console.log("read: " + itemJson);
 
-    var result = "<li>";
+        listItemsHtml += itemJson;
+    });                    
+    document.getElementById("directionsOLId").innerHTML = listItemsHtml;	
+}
 
-    // header
-    
-    result += "<a href=\"" + encodeURI(element.linkUrl) + "\">"
-    result += "<h3>";
-    result += element.name;
-    result += "</h3><</a>";
+function LoadPhotos(photoUrls){
+    var listItemsHtml = "";
+    photoUrls.forEach(element => {
+        var itemJson = "<li>";
+        itemJson += "<img width=\"50\" height=\"50\" src=\"";
+        itemJson += element;
+        itemJson += "\"></img>";
+        itemJson += "</li>"
+        console.log("read: " + itemJson);
 
-    // cover image
-    result += "<img width=\"100\" height=\"100\" class=\"recipeListItemImage\" src=\"";
-    result += encodeURI(element.coverUrl) + "\" alt=\"" + element.name + "\">";
-    result += "</img>";
-
-    // summary
-    result += "<p>" + element.summary + "<p>";
-
-    result += "</li>"
-    return result;
+        listItemsHtml += itemJson;
+    });                    
+    document.getElementById("photosULId").innerHTML = listItemsHtml;	
 }
