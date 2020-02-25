@@ -9,8 +9,7 @@
         <script type="application/javascript">
 
             // Gloal objects
-            var recipes;
-
+      
             window.onload = function() {
 
                 LoadRecipeContent();
@@ -28,7 +27,7 @@
                         try	
                         {
                             var json = JSON.parse(this.responseText);
-                            recipes = json.recipeList.recipes;
+                            var recipes = json.recipeList.recipes;
 
 
                             var listItemsHtml = "";
@@ -55,7 +54,7 @@
                 xhttp.on
                 //You can't make AJAX requests (by default) from a file:/// URL scheme. Use an HTTP server to serve your files
                 // file needs to be on a webserver
-                xhttp.open("GET", "./recipes.json", true);
+                xhttp.open("GET", "./recipeSummaries.json", true);
                 xhttp.send();
             }
 

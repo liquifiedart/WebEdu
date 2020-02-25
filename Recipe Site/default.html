@@ -6,7 +6,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="./css/common.css" />
-        <script type="application/javascript" src="./scripts/example.js"></script>
+        <script type="application/javascript">
+
+            window.onload = function() {
+
+                LoadFeaturedContent();
+            };
+
+            function LoadFeaturedContent(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onerror = function(){
+                    alert(this.responseText);
+                };
+
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200 ){
+
+                        
+                        try	
+                        {
+                            var json = JSON.parse(this.responseText);
+                            console.log("read: " + json.name);
+                            var name = json.name;
+                            var coverUrl = encodeURI(json.coverUrl);
+
+
+                            document.getElementById("featuredHeader").innerHTML = "Featured: " + name;	
+                            document.getElementById("featuredImage").setAttribute("src", coverUrl);
+                            //document.getElementById("page2").style.display = "block"
+
+                        }
+                        catch(e)
+                        {
+                            console.log(e);
+                        }
+
+                    }
+                };
+
+                xhttp.on
+                //You can't make AJAX requests (by default) from a file:/// URL scheme. Use an HTTP server to serve your files
+                // file needs to be on a webserver
+                xhttp.open("GET", "./featured.json", true);
+                xhttp.send();
+            }
+        </script>
     </head>
 
     <body>
@@ -20,14 +64,14 @@
         </header>
 
         <article>
+            <h2>Home</h2>
             <section title="Featured Recipe">
-                <h2>Home</h2>
+                <h3 id="featuredHeader"></h3>
+                <img id="featuredImage" width="500" height="300"></img>
             </section>
         </article>
         
-        <footer class="footer">
-            2019 Recipe World &lt;liquifiedart&gt;&copy;
-        </footer>
+        <footer class="footer">&copy;2019 Recipe World &lt;liquifiedart&gt;</footer>
     </body>
 
 </html>

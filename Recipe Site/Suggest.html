@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="./css/common.css" />
-        <script type="application/javascript" src="./scripts/example.js"></script>
+        <script type="application/javascript" src="./scripts/suggest.js"></script>
     </head>
 
     <body>
@@ -20,13 +20,27 @@
         </header>
 
         <article>
+            <h2>Suggest a Recipe</h2>
             <section>
-                <h2>Suggest a Recipe</h2>
+                <form method="POST" enctype="text/plain">  
+                    <!-- action="./form_file.php" -->
+                    <label for="frname">Recipe Name:</label><br>                  
+                    <input type="text" id="frname" name="frname" size="50" autocomplete="off"><br><br>
+
+                    <label for="fingredients">Ingredients:</label><br>
+                    <textarea id="fingredients" name="fingredients" cols="50" rows="10" autocomplete="off"></textarea>                    
+                    <!-- <input type="text" id="fingredients" name="fingredients" size="50"> -->
+                    <br><br>
+                    
+                    <label for="fname">Name:</label><br>
+                    <input type="text" id="fname" name="fname" size="50" autocomplete="off"><br><br>   
+
+                    <INPUT TYPE="button" value="Submit" onclick="submitForm();" >
+                    <!-- <input type="submit" value="Submit"> -->
+                </form>
             </section>
         </article>
         
-        <footer class="footer">
-            2019 Recipe World &lt;liquifiedart&gt;&copy;
-        </footer>
+        <footer class="footer">&copy;2019 Recipe World &lt;liquifiedart&gt;</footer>
     </body>
 </html>

@@ -2,19 +2,19 @@
 	"recipeList" :{
 		"recipes":[{
 			"name" : "Chocolate Cake",
-			"summary" : "Summary of a chocolate cake",
+			"summary" : "Chocolate cake or chocolate gâteau is a cake flavored with melted chocolate, cocoa powder, or both.",
 			"coverUrl" : "./Chocolate Cake/cover.jpeg",
 			"linkUrl" : "./Chocolate Cake/chcake.html"			
 		},
 		{
 			"name" : "Magic Cake",
-			"summary" : "Summary of a magic cake",
+			"summary" : "One simple thin batter, bake it and voila! You end up with a 3 layer cake, with a delicious custardy layer in the center. It really is magical.",
 			"coverUrl" : "./Magic Cake/cover.jpeg",
 			"linkUrl" : "./Magic Cake/mcake.html"
 		},
 		{
 			"name" : "Florida Omlette",
-			"summary" : "Summary of a florida omelette",
+			"summary" : "In cuisine, an omelette or omelet is a dish made from beaten eggs fried with butter or oil in a frying pan. ",
 			"coverUrl" : "./Florida Omlette/cover.jpeg",
 			"linkUrl" : "./Florida Omlette/fomlette.html"			
 		}]
